@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parking">
+        <h2>Parking lot</h2>
+        <h4>Two Wheeler:20/hr</h4>
+        <h4>Four Wheeler Wheeler:60/hr</h4>
+        <h4>Heavy Vehicle:100/hr</h4>
+  <br>
+    <label for="">select vehicle type:</label>
+    <select id="input" >
+        <option value="Two_wheeler">Two_wheeler</option>
+        <option value="Four_wheeler">Four_wheeler</option>
+        <option value="Heavy_vehicle">Heavy_vehicle</option>
+    </select><br><br>
+
+    <label>No of hours</label>
+    <input type="number" id="inp"><br><br>
+    <button type="button" onclick="display()">calculate</button>
+    <h4 id="out"></h4>
+</div>
+
+    <script>
+        function display(){
+            let hours=document.querySelector("#inp").value;
+            let input=document.querySelector("#input").value;
+            let a=20;
+            let b=60;
+            let c=100;
+            let output;
+            if(input==='Two_wheeler'){
+                output="charge is Rs."+a*hours;   
+            }
+            if(input==='Four_wheeler'){
+                output="charge is Rs."+b*hours;   
+            }
+            if(input==='Heavy_vehicle'){
+                output="charge is Rs."+c*hours; 
+            }
+            document.querySelector("#out").innerHTML=output;
+          
+        }
+
+    </script>
+</body>
+</html>
